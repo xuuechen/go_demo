@@ -55,6 +55,6 @@ func main() {
 	}
 	fmt.Printf("%s ", bytes)
 
-	fmt.Println()
+	fmt.Println("-----------------------------------")
 
 }
