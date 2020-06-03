@@ -54,4 +54,7 @@ func main() {
 		return
 	}
 	fmt.Printf("%s ", bytes)
+
+	fmt.Println()
+
 }
