@@ -4,7 +4,7 @@ import "fmt"
 
 //用面向对象的方法来写一个简单的学生管理系统
 //主要功能：增删改查
-//2020/0604
+//2020/06/04
 var studentMan StudentMan
 
 type StudentMan struct {
