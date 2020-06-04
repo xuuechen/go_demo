@@ -46,6 +46,15 @@ func (s *StudentMan) deleteStu(index int) {
 	s.student = append(s.student[:index], s.student[index+1:]...)
 }
 
+//修改学生信息
+func (s *StudentMan) updateStu(stuId int, stu *Student) {
+	for i, v := range s.student {
+		if stuId == v.Id {
+			s.student[i] = stu
+		}
+	}
+}
+
 func main() {
 
 	studentMan = StudentMan{[]*Student{}}
@@ -59,7 +68,15 @@ func main() {
 	//查看学生信息
 	studentMan.GetStudentInfo()
 	//删除学生信息
-	studentMan.deleteStu(0)
-	studentMan.GetStudentInfo()
+	//studentMan.deleteStu(0)
+	//studentMan.GetStudentInfo()
+	//修改学生信息
+	studentMan.updateStu(1, &Student{
+		Id:     1,
+		Name:   "xuechen",
+		Age:    22,
+		Gender: "female",
+	})
 
+	studentMan.GetStudentInfo()
 }
