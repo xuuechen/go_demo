@@ -41,18 +41,20 @@ func main() {
 		//fmt.Printf("%v ",v)
 	}
 
-	for _,v := range s1{
-		fmt.Printf("%d ",*v)
+	for _, v := range s1 {
+		fmt.Printf("%d ", *v)
 	}
 	fmt.Println()
 	fmt.Println(s1)
 
-	for i,v:=range s{
-		fmt.Printf("%v %v ",i,v)
+	s2 := s
+	for i, v := range s2 {
+		fmt.Printf("%v %p ", i, &v)
 	}
-
-
-
-
+	fmt.Println()
+	fmt.Println("-------------------------")
+	for i, v := range s {
+		fmt.Printf("%v %p ", i, &v)
+	}
 
 }
